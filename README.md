@@ -16,9 +16,11 @@ To address these challenges, computational methods and machine learning approach
 An open database of medicinal molecules (**ChEMBL**), were used as data sources for collecting the dataset. `all_mols.csv`
 
 ### Data processing
-After initial processing presented in the file `Data_processing.ipynb` the dataset contained $3{,}152$ inhibitor molecules with a known $IC_{50}$ value, a key indicator of the effectiveness of a molecule.
+After initial processing presented in the file `Data_processing.ipynb` the dataset contained $3{,}176$ inhibitor molecules with a known $IC_{50}$ value, a key indicator of the effectiveness of a molecule.
 
-**Morgan fingerprints** were chosen as the main molecular descriptors. The dataset prepared for training, with loaded descriptors, is presented in the Data folder `df_fp.csv`.
+### Molecules representations
+
+To construct the QSAR model, we evaluated five molecular representation methods using the PyCaret autoML framework. This process presented in the file `Molecules_representations.ipynb`. **Extended-connectivity fingerprints** (ECFPs) demonstrated the best performance metrics. The dataset prepared for training, with loaded descriptors, is presented in the Data folder `df_fp.csv`.
 
 ### QSAR model
 The process of model training is presented in the file `Predicted_model.ipynb`.
